@@ -1,6 +1,8 @@
 package com.gupaoedu.vip.pattern.singleton.test;
 
 import com.gupaoedu.vip.pattern.singleton.lazy.LazyOne;
+import com.gupaoedu.vip.pattern.singleton.lazy.LazyTwo;
+import com.gupaoedu.vip.pattern.singleton.register.RegiterEnum;
 
 import java.util.concurrent.CountDownLatch;
 
@@ -36,7 +38,7 @@ public class ThreadSafeTest {
                         }
 
                         //必然会调用，可能会有很多线程同时去访问getInstance()
-                        Object obj = LazyOne.getInstance();
+                        Object obj = LazyTwo.getInstance();
                         System.out.println(System.currentTimeMillis() + ":" + obj);
 
                     }catch (Exception e){
@@ -60,7 +62,7 @@ public class ThreadSafeTest {
 
 
        // Color.INSTANCE.getInstance();
-
+        RegiterEnum.BLACK.getInstance();
 
 
 

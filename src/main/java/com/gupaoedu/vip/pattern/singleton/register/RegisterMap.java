@@ -1,6 +1,5 @@
 package com.gupaoedu.vip.pattern.singleton.register;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
