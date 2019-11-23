@@ -29,7 +29,7 @@ public class JDKMeipo implements InvocationHandler{
         System.out.println("我是媒婆：我要给你找对象，现在已经拿到你的需求");
         System.out.println("开始物色");
 
-        method.invoke(this.target,args);
+        method.invoke(target,args);
 
         System.out.println("如果合适的话，就准备办事");
 

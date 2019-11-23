@@ -14,8 +14,13 @@ public class JDKProxyTest {
 
         try {
             Person obj = (Person)new JDK58().getInstance(new XieMu());
+            Person obj2 = (Person)new JDKMeipo().getInstance(new XieMu());
+            //获取的是代理对象 class com.sun.proxy.$Proxy0
             System.out.println(obj.getClass());
+            System.out.println(obj2.getClass());
+
             obj.findJob();
+            obj2.findLove();
 
             //原理：
             //1、拿到被代理对象的引用，并且获取到它的所有的接口，反射获取
